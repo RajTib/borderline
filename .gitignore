@@ -1,0 +1,37 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+.venv/
+
+# Environment variables
+.env
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# SQLite (if ever used)
+*.sqlite3
+
+# Pytest
+.pytest_cache/
+
+# Migrations
+alembic/versions/
+
+# Build
+dist/
+build/
+*.egg-info/
