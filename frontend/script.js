@@ -6,11 +6,16 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap'
 }).addTo(map);
 
+let path = [];
+let polyline = L.polyline([], { color: "red" }).addTo(map);
+
 map.on('click', async function (e) {
     const lat = e.latlng.lat;
     const lon = e.latlng.lng;
 
-    console.log("Sending:", lat, lon);
+    path.push([lat, lon]);
+
+    polyline.setLatLngs(path);
 
     await fetch("http://127.0.0.1:8000/update-location", {
         method: "POST",
