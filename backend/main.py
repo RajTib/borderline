@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import math
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
